@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.thiago'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation "org.deeplearning4j:deeplearning4j-core:1.0.0-beta6"
+    implementation "org.nd4j:nd4j-native-platform:1.0.0-beta6"
+    // SLF4J simple binding to silence the runtime warning
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+}
+
+test {
+    useJUnitPlatform()
+}
